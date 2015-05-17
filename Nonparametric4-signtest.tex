@@ -1,30 +1,44 @@
-ONE SAMPLE: THE SIGN TEST
-In statistics, the sign test can be used to test the hypothesis that the difference median is zero between the continuous distributions of two random variables X and Y, in the situation when we can draw paired samples from X and Y. It is a non-parametric test which makes very few assumptions about the nature of the distributions under test - this means that it has very general applicability but may lack the statistical power of other tests such as the paired-samples t-test[1] or the Wilcoxon signed-rank test.[2]
+\section{ONE SAMPLE: THE SIGN TEST}
+\begin{itemize}
+\item In statistics, the sign test can be used to test the hypothesis that the difference median is zero between the continuous distributions of two random variables X and Y, in the situation when we can draw paired samples from X and Y. 
+\item It is a non-parametric test which makes very few assumptions about the nature of the distributions under test. 
+\item This means that it has very general applicability but may lack the statistical power of other tests such as the paired-samples t-test or the Wilcoxon signed-rank test.
+\end{itemize}
+
+%============================================================= %
 Contents  [hide] 
 1 Method
 2 Assumptions
 3 Significance testing
 4 See also
 5 References
-Method[edit]
-Let p = Pr(X > Y), and then test the null hypothesis H0: p = 0.50. In other words, the null hypothesis states that given a random pair of measurements (xi, yi), then xi and yi are equally likely to be larger than the other.
+
+%============================================================= %
+\subsection*{Methods}
+Let $p = Pr(X > Y)$, and then test the null hypothesis H0: p = 0.50. In other words, the null hypothesis states that given a random pair of measurements (xi, yi), then xi and yi are equally likely to be larger than the other.
 To test the null hypothesis, independent pairs of sample data are collected from the populations {(x1, y1), (x2, y2), . . ., (xn, yn)}. Pairs are omitted for which there is no difference so that there is a possibility of a reduced sample of m pairs.[3]
-Then let W be the number of pairs for which yi − xi > 0. Assuming that H0 is true, then W follows a binomial distribution W ~ b(m, 0.5).
+Then let W be the number of pairs for which $y_i − x_i > 0$. 
+
+Assuming that H0 is true, then W follows a binomial distribution $W \sim b(m, 0.5)$.
 \subsection*{Assumptions}
 \begin{itemize}
-\item Let Zi = Yi – Xi for i = 1, ... , n.
-\item The differences Zi are assumed to be independent.
-\item Each Zi comes from the same continuous population.
+\item Let $Z_i = Y_i – X_i$ for i = 1, ... , n.
+\item The differences $Z_i$ are assumed to be independent.
+\item Each $Z_i$ comes from the same continuous population.
 \item The values Xi and Yi represent are ordered (at least the ordinal scale), so the comparisons "greater than", "less than", and "equal to" are meaningful.
 \end{itemize}
+
+%==============================================================================================%
 \subsection*{Significance testing}
 Since the test statistic is expected to follow a binomial distribution, the standard binomial test is used to calculate significance. The normal approximation to the binomial distribution can be used for large sample sizes, m>25.[3]
-The left-tail value is computed by Pr(W ≤ w), which is the p-value for the alternative H1: p < 0.50. This alternative means that the X measurements tend to be higher.
-The right-tail value is computed by Pr(W ≥ w), which is the p-value for the alternative H1: p > 0.50. This alternative means that the Y measurements tend to be higher.
-For a two-sided alternative H1 the p-value is twice the smaller tail-value.
 
-%----------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------%
+\begin{itemize}
+\item The left-tail value is computed by Pr(W ≤ w), which is the p-value for the alternative H1: p < 0.50. This alternative means that the X measurements tend to be higher.
+\item The right-tail value is computed by Pr(W ≥ w), which is the p-value for the alternative H1: p > 0.50. This alternative means that the Y measurements tend to be higher.
+\item For a two-sided alternative H1 the p-value is twice the smaller tail-value.
+\end{itemize}
+
+%==============================================================================================%
 The sign test can be used to test a null hypothesis concerning the value of the population median. Therefore,
 it is the nonparametric equivalent to testing a hypothesis concerning the value of the population mean. The
 values in the random sample are required to be at least at the ordinal scale, with no assumptions required about
@@ -58,11 +72,12 @@ with the old system, for which the population median is 80 units per workshift. 
 the doubt to the redesigned system, formulate the null hypothesis and test it at the 5 percent level of
 significance. The sample data are reported in the first part of Table 17.1.
 The null and alternative hypotheses are
-H0: Med ¼ 80
-H1: Med . 80
+\[ H0: Med ¼ 80\]
+\[H1: Med . 80\]
 %------------------------------------------------------------------------------%
 Because no assumption is made about the form of the population distribution, a nonparametric test is
 appropriate. Using the sign test, the null and alternative hypotheses in terms of the proportion of plus signs of the
 differences, where d ¼ (X ! 80), are
 H0: p ¼ 0:50
 H1: p . 0:50
+%================================================================================ %
